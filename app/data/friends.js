@@ -1,0 +1,1 @@
+// Save application's data here as array of objects
