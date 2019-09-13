@@ -1,12 +1,24 @@
 {
   "name": "friendfinder",
   "version": "1.0.0",
-  "description": "",
+  "description": "https://sellieee.github.io/FriendFinder/ | https://github.com/Sellieee/",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sellieee/FriendFinder.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Sellieee/FriendFinder/issues"
+  },
+  "homepage": "https://github.com/Sellieee/FriendFinder#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "path": "^0.12.7"
+  }
 }
