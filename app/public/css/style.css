@@ -1,0 +1,13 @@
+.center-img {
+   display: block;
+   margin: 0 auto;
+   width: 50%;
+}
+
+h1 {
+   font-family: 'Dancing Script', cursive;
+   text-align: center;
+   margin-top: 20px;
+   font-weight: 900;
+   font-size: 400%;
+}

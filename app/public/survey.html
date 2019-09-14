@@ -5,6 +5,7 @@
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
    <!-- Bootstrap -->
    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -20,9 +21,15 @@
       integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
    </script>
 
+   <!-- Google Font -->
+   <link href="https://fonts.googleapis.com/css?family=Dancing+Script:700&display=swap" rel="stylesheet">
+
    <!-- jQuery cdn -->
    <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
       crossorigin="anonymous"></script>
+
+   <!-- My CSS -->
+   <link rel="stylesheet" type="text/css" href="css/style.css">
 
    <title>Survey Page | FriendFinder</title>
 </head>
@@ -280,9 +287,9 @@
                <hr>
                <br>
                <h5 id="userMatch"></h5>
-               <img id="userMatchPic" class="materialboxed" width="600" src="">
+               <img id="userMatchPic" class="materialboxed center-img" width="300" height="300" src="">
             </div>
-            <div class="modal-footer"> <a href="/survey" class="modal-action modal-close">Find a new match!
+            <div class="modal-footer"> <a href="/survey" class="modal-action modal-close new-match">Find a new match!
                </a>
                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
             </div>
@@ -307,6 +314,8 @@
    <script>
       $(document).ready(function () {
 
+         // Hide the modal initially
+         $("#match-modal").modal("hide");
 
          // Submit button
          $("#submit-btn").on("click", function (event) {
@@ -332,13 +341,16 @@
 
             $('#match-modal').modal('toggle')
 
-            $.post("/api/friends", userSurvey).done(function (data) {
+            $.post("/api/friends", userSurvey, function (data) {
                $("#userMatch").html(data.matchName);
                $("#userMatchPic").attr("src", data.matchPic)
                $("#match-modal").modal("show");
             })
          })
 
+         $("#new-match").on("click", function () {
+            window.location.reload();
+         })
       })
    </script>
 

@@ -10,7 +10,7 @@ var PORT = process.env.PORT || 8090;
 
 app.use(express.static(path.join(__dirname, "./app/public")));
 
-// Parsing the data
+// Middleware
 app.use(express.urlencoded({
    extended: true
 }));

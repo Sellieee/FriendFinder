@@ -7,15 +7,17 @@ var path = require("path");
 // Import the friend arrays
 var friends = require("../data/friends.js");
 
-// Export API
+// Export API 
 module.exports = function (app) {
+   // Get Request
    app.get("/api/friends", function (req, res) {
       res.json(friends);
    });
 
-   app.post("api/friends", function (req, res) {
+   // POST Request
+   app.post("/api/friends", function (req, res) {
       var inputBody = req.body;
-      var input = req.body.scores;
+      var input = inputBody.scores;
       var matchName = "";
       var matchPic = "";
       var totalDifference = 50; //Setting the limit before the friends can be matched
@@ -32,5 +34,10 @@ module.exports = function (app) {
          }
       }
       friends.push(inputBody);
+      res.json({
+         status: "OK",
+         matchName: matchName,
+         matchPic: matchPic
+      })
    });
 }
