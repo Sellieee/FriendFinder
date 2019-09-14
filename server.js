@@ -17,7 +17,7 @@ app.use(express.urlencoded({
 app.use(express.json());
 
 // Displaying the route files
-require(path.join(__dirname, "./app/routing/apiRoute"))(app);
+require(path.join(__dirname, "./app/routing/apiRoutes"))(app);
 require(path.join(__dirname, "./app/routing/htmlRoutes"))(app);
 
 // Start listening on the port

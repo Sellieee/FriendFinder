@@ -19,6 +19,11 @@
    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
       integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
    </script>
+
+   <!-- jQuery cdn -->
+   <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+      crossorigin="anonymous"></script>
+
    <title>Survey Page | FriendFinder</title>
 </head>
 
@@ -29,13 +34,18 @@
             <h1>Survey Questions</h1>
          </div>
       </div>
+      <br>
+      <hr>
+      <br>
       <div class="row">
          <div class="col-sm-12">
             <div class="intro-question">
                <h3>About You</h3>
                <div class="input-field">
+                  <hr>
                   <h5>Your Name (Required)</h5>
                   <input type="text" class="validate" placeholder="Type your name here" id="username">
+                  <hr>
                   <h5>Link to your Photo (Required)</h5>
                   <input type="text" class="validate" placeholder="Insert photo link here" id="userPhoto">
                </div>
@@ -58,6 +68,9 @@
             </div>
          </div>
       </div>
+      <br>
+      <hr>
+      <br>
       <div class="row">
          <div class="col-sm-12">
             <div class="input-field">
@@ -74,6 +87,9 @@
             </div>
          </div>
       </div>
+      <br>
+      <hr>
+      <br>
       <div class="row">
          <div class="col-sm-12">
             <div class="input-field">
@@ -90,6 +106,9 @@
             </div>
          </div>
       </div>
+      <br>
+      <hr>
+      <br>
       <div class="row">
          <div class="col-sm-12">
             <div class="input-field">
@@ -106,6 +125,9 @@
             </div>
          </div>
       </div>
+      <br>
+      <hr>
+      <br>
       <div class="row">
          <div class="col-sm-12">
             <div class="input-field">
@@ -122,6 +144,9 @@
             </div>
          </div>
       </div>
+      <br>
+      <hr>
+      <br>
       <div class="row">
          <div class="col-sm-12">
             <div class="input-field">
@@ -138,6 +163,9 @@
             </div>
          </div>
       </div>
+      <br>
+      <hr>
+      <br>
       <div class="row">
          <div class="col-sm-12">
             <div class="input-field">
@@ -154,6 +182,9 @@
             </div>
          </div>
       </div>
+      <br>
+      <hr>
+      <br>
       <div class="row">
          <div class="col-sm-12">
             <div class="input-field">
@@ -170,6 +201,9 @@
             </div>
          </div>
       </div>
+      <br>
+      <hr>
+      <br>
       <div class="row">
          <div class="col-sm-12">
             <div class="input-field">
@@ -186,6 +220,9 @@
             </div>
          </div>
       </div>
+      <br>
+      <hr>
+      <br>
       <div class="row">
          <div class="col-sm-12">
             <div class="input-field">
@@ -205,18 +242,107 @@
       <br>
       <hr>
       <br>
+
+      <!-- This button *should* trigger the modal -->
       <div class="submit-button">
-         <button class="btn btn-info" type="submit" name="Submit" id="submit-btn">
+         <button class="btn btn-info" type="submit" data-toggle="modal" data-target="#exampleModalCenter" name="Submit"
+            id="submit-btn">
             <i>See my match!</i>
          </button>
       </div>
    </div>
+   <br>
+   <hr>
+   <br>
    <footer class="footer">
       <div class="container">
-         <p><a href="/api/friends">API Friends List</a> | <a href="/api/githubrepo">Github Repo</a>
+         <p><a href="/api/friends">API Friends List</a> | <a href="https://github.com/Sellieee/FriendFinder">Github
+               Repo</a>
          </p>
       </div>
    </footer>
+
+   <!-- Create Modal to display match! -->
+   <!-- Modal -->
+   <div class="modal fade" id="match-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+      aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+         <div class="modal-content">
+            <div class="modal-header">
+               <h5 class="modal-title" id="exampleModalLongTitle">Your Match!</h5>
+               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+               </button>
+            </div>
+            <div class="modal-body">
+               <h4>Your match!</h4>
+               <br>
+               <hr>
+               <br>
+               <h5 id="userMatch"></h5>
+               <img id="userMatchPic" class="materialboxed" width="600" src="">
+            </div>
+            <div class="modal-footer"> <a href="/survey" class="modal-action modal-close">Find a new match!
+               </a>
+               <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+         </div>
+      </div>
+   </div>
+
+   <!-- jQuery cdn -->
+   <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+      crossorigin="anonymous"></script>
+
+   <!-- Bootstrap jQuery -->
+   </script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+   </script>
+   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+   </script>
+
+   <!-- Javascript Here -->
+   <script>
+      $(document).ready(function () {
+
+
+         // Submit button
+         $("#submit-btn").on("click", function (event) {
+            event.preventDefault();
+
+            // Getting the user's input in survey
+            var userSurvey = {
+               name: $("#username").val().trim(),
+               photo: $("#userPhoto").val().trim(),
+               scores: [
+                  $("#question-1").val().trim(),
+                  $("#question-2").val().trim(),
+                  $("#question-3").val().trim(),
+                  $("#question-4").val().trim(),
+                  $("#question-5").val().trim(),
+                  $("#question-6").val().trim(),
+                  $("#question-7").val().trim(),
+                  $("#question-8").val().trim(),
+                  $("#question-9").val().trim(),
+                  $("#question-10").val().trim()
+               ]
+            };
+
+            $('#match-modal').modal('toggle')
+
+            $.post("/api/friends", userSurvey).done(function (data) {
+               $("#userMatch").html(data.matchName);
+               $("#userMatchPic").attr("src", data.matchPic)
+               $("#match-modal").modal("show");
+            })
+         })
+
+      })
+   </script>
+
+
 </body>
 
 </html>

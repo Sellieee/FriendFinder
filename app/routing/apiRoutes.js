@@ -14,6 +14,7 @@ module.exports = function (app) {
    });
 
    app.post("api/friends", function (req, res) {
+      var inputBody = req.body;
       var input = req.body.scores;
       var matchName = "";
       var matchPic = "";
@@ -30,6 +31,6 @@ module.exports = function (app) {
             matchPic = friends[i].photo;
          }
       }
+      friends.push(inputBody);
    });
-   friends.push(req.body);
 }
