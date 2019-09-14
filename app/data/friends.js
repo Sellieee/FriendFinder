@@ -10,13 +10,23 @@ var friends = [{
       "scores": [5, 1, 4, 5, 2, 3, 1, 4, 5, 2]
    }, {
       "name": "Ahmed",
-      "photo": "https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
+      "photo": "https://comicvine1.cbsistatic.com/uploads/scale_small/11/114183/6665931-bart.png",
       "scores": [5, 1, 4, 4, 5, 1, 2, 5, 4, 1]
    },
    {
       "name": "Salami",
       "photo": "https://tasteofartisan.com/wp-content/uploads/2019/01/Homemade-salami-Milano-1.jpg",
       "scores": [1, 2, 5, 3, 4, 5, 2, 1, 2, 3]
+   },
+   {
+      "name": "Garfield",
+      "photo": "https://cdn.onebauer.media/one/empire-images/articles/5be9e794fd0c0bc84447d49b/garfield.jpg?quality=50&width=1800&ratio=16-9&resizeStyle=aspectfill&format=jpg",
+      "scores": [2, 4, 5, 2, 1, 4, 2, 4, 5, 2]
+   },
+   {
+      "name": "Snoopy",
+      "photo": "https://i0.wp.com/shop.mycromart.it/wp-content/uploads/2016/08/PSJ180180P10-Snoopy-Red-Heart.jpg?resize=450%2C450",
+      "scores": [1, 2, 5, 3, 4, 2, 1, 5, 2, 1]
    }
 ];
 
